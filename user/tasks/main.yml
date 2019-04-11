@@ -15,4 +15,16 @@ file:
   group: jboss
   state: directory
   recurse: yes
-  
+
+#######################################
+- name: create group tomcat
+  group:
+    name: tomcat
+    home: /opt/tomcat
+
+- name: create user tomcat
+  user:
+    name: tomcat
+    group: tomcat
+    home: /opt/tomcat
+    

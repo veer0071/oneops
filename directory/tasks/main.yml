@@ -1,5 +1,5 @@
-- name:
-  yum:
-    name: http
-    state: present
-    
+- name: creating tomcat directory
+file:
+  path: /opt/tomcat
+  state: directory
+  

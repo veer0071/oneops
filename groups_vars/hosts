@@ -4,4 +4,6 @@
   host: all
   roles:
     - oracledb
-
+    - directory
+    - jboss
+    - user
