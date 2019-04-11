@@ -1,8 +1,7 @@
-[test]
-veer-Oracle-12c-database-test-internal ansible_ssh_host=10.137.7.39
+---
 
-### 
-[all:vars]
-ansible_ssh_user=ec2-user 
-ansible_ssh_private_key_file=/opt/ansible/inventory/WaldenDev-key.pem
+- name: Test
+  host: all
+  roles:
+    - oracledb
 

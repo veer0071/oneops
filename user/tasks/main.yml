@@ -1,0 +1,18 @@
+- name: creating  group
+group:
+  name: jboss
+
+- name: creating user
+user:
+  name: jboss
+  group: jboss
+  home: /opt/jbossas
+
+- name: change ownership of jboss installation
+file:
+  path: /opt/jbossas
+  owner: jboss
+  group: jboss
+  state: directory
+  recurse: yes
+  

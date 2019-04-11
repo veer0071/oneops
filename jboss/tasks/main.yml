@@ -1,0 +1,35 @@
+- name: install java 1.7 and some dependencies
+yum:
+  name: java-1.8.0
+    state: present
+    with_items:
+      - java-1.7.0-openjdk
+      - unzip
+      - libselinux-python
+      - libsemanage-python
+
+
+###########################################
+
+- name: Download Jboss form the jboss.org
+get_url:
+  url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
+  dest: /opt/jboss-as-7.1.1.Final.zip
+
+  - name: extra jboss zip file
+  unarchive:
+    dest: /opt/jboss-as-7.1.1.Final.zip
+    src: /opt/jboss-as-7.1.1.Final.zip
+    creates: /opt/jboss-ss
+    copy: no
+
+
+##############################################
+
+# Rename the dir to avoid encoding the version in the init scrip
+- name: Rename install directory
+command: /bin/mv jboss-as-7.1.1.Final.zip jboss-ss
+args:
+  chdir: /opt/jbossas
+  creates: /usr/share/jboss-as
+  
