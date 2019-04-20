@@ -10,6 +10,6 @@
 #  become: yes
 #  become_method: sudo
 
-  roles:
+  tasks:
 #    - tomcat
     - dir
