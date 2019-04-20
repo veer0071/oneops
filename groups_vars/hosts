@@ -1,9 +1,4 @@
 ---
 
-- name: Test
+- name: ansible
   host: localhost
-  roles:
-    - oracledb
-    - directory
-    - jboss
-    - user
