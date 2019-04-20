@@ -1,5 +1,0 @@
-- name: creating tomcat directory
-file:
-  path: /opt/tomcat
-  state: directory
-  
