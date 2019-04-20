@@ -3,3 +3,12 @@
 #- name: apply common configuration to all nodes
 #  hosts: localhost
 #  remote_user: root
+
+- hosts: localhost
+  remote_user: root
+  sudo: yes
+  become: yes
+  become_method: sudo
+
+  roles:
+    - tomcat
