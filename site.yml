@@ -25,12 +25,17 @@
 #  roles:
     - common
 
-- name: configure and deploy the webservers and application code
-  hosts: localhost
-  remote_user: root
+#- name: configure and deploy the webservers and application code
+#  hosts: localhost
+#  remote_user: root
 
+  - hosts: localhost
   roles:
-    - dir
+     - dir
+#     - webservers
+
+#  roles:
+#    - dir
 
 #- name: deploy MySQL and configure the databases
 #  hosts: dbservers
