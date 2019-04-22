@@ -3,8 +3,8 @@
 #- name: ansible
 #  host: localhost
 
-- hosts: localhost
-  remote_user: root
-  sudo: yes
-  become: yes
-  become_method: sudo
+# - hosts: localhost
+#   remote_user: root
+#   sudo: yes
+#   become: yes
+#   become_method: sudo
