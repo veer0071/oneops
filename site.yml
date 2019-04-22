@@ -1,5 +1,11 @@
-- hosts: localhost  
-  roles:
-     - dir
-  # tasks:
-  #   - dir
+# - hosts: localhost
+#   roles:
+#      - dir
+#   # tasks:
+#   #   - dir
+
+
+ hosts: localhost
+  become: true
+  tasks:
+  - name: dir
