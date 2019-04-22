@@ -1,5 +1,5 @@
 - hosts: localhost
   roles:
      - dir
-  tasks:
-     - shell: /usr/bin/foo.sh
+  #tasks:
+  #   - shell: /usr/bin/foo.sh
