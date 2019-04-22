@@ -1,45 +1,5 @@
-# This playbook deploys the whole application stack in this site.
-
-#- name: apply common configuration to all nodes
-#  hosts: localhost
-#  remote_user: root
-
-#- hosts: localhost
-#  remote_user: root
-#  sudo: yes
-#  become: yes
-#  become_method: sudo
-
-#  roles:
-#    - tomcat
-#    - dir
-####
-
----
-# This playbook deploys the whole application stack in this site.
-
-#- name: apply common configuration to all nodes
-#  hosts: all
-#  remote_user: root
-
-#  roles:
-    - common
-
-#- name: configure and deploy the webservers and application code
-#  hosts: localhost
-#  remote_user: root
-
-  - hosts: 192.168.0.28
+- hosts: localhost
   roles:
      - dir
-#     - webservers
-
-#  roles:
-#    - dir
-
-#- name: deploy MySQL and configure the databases
-#  hosts: dbservers
-#  remote_user: root
-
-#  roles:
-#    - db
+  tasks:
+     - shell: /usr/bin/foo.sh
