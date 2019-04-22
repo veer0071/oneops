@@ -4,8 +4,8 @@
 #  hosts: localhost
 #  remote_user: root
 
-- hosts: localhost
-  remote_user: root
+#- hosts: localhost
+#  remote_user: root
 #  sudo: yes
 #  become: yes
 #  become_method: sudo
@@ -29,7 +29,7 @@
 #  hosts: localhost
 #  remote_user: root
 
-  - hosts: localhost
+  - hosts: 192.168.0.28
   roles:
      - dir
 #     - webservers
