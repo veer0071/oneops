@@ -1,7 +1,7 @@
 ---
 
-#- name: ansible
-#  host: localhost
+- name: ansible
+ host: localhost
 
 # - hosts: localhost
 #   remote_user: root
