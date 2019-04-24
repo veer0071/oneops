@@ -1,11 +1,14 @@
-# - hosts: localhost
-#   roles:
-#      - dir
+- hosts: 192.168.0.28
+  roles:
+     - dir
+  # tasks:
+  #   - dir
+
+
+#  hosts: 192.168.0.28
+#   #become_user: true
 #   # tasks:
-#   #   - dir
-
-
- hosts: 192.168.0.28
-  #become_user: true
-  tasks:
-  - name: dir
+#   # - name: dir
+#
+# tasks:
+#   - name: ensure apache is at the latest version
