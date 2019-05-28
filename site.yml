@@ -1,6 +1,6 @@
 ---
 # file: ansible
-- hosts: localhost
+- hosts: 192.168.0.27
   roles:
     - dir
 #    - webtier
