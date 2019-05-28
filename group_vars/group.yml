@@ -1,0 +1,10 @@
+---
+
+# - name: ansible
+#  host: 192.168.0.28
+
+# - hosts: localhost
+#   remote_user: root
+#   sudo: yes
+#   become: yes
+#   become_method: sudo
