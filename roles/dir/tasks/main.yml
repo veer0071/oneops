@@ -1,4 +1,4 @@
-name: create directory
+# name: create directory
 - file:
     path: /opt/tomcat
     state: directory
