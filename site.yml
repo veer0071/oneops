@@ -1,6 +1,6 @@
 ---
 # file: ansible
-- hosts: all
+- hosts: localhost
   roles:
     - dir
 #    - webtier
