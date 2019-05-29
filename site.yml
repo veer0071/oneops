@@ -1,6 +1,7 @@
 ---
 # file: ansible
 - hosts: all
+  remote_user: root
   roles:
     - dir
 #    - webtier
