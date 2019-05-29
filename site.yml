@@ -1,6 +1,7 @@
 ---
 # file: ansible
 - hosts: all
+  become: yes
   roles:
     - dir
 #    - webtier
