@@ -1,7 +1,15 @@
 ---
 # file: ansible
 - hosts: all
-  remote_user: root
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+
+  
   roles:
     - dir
+    - tomcat
+    - java
+    - docker
+    - maven
 #    - webtier
