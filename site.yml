@@ -1,11 +1,12 @@
 ---
 # file: ansible
 - hosts: all
+  connection: local
   remote_user: root
   become: yes
   become_method: sudo
   become_user: root
-  
+
   
   roles:
     - dir
