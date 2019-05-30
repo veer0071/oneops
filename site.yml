@@ -5,6 +5,7 @@
   become: yes
   become_method: sudo
   become_user: root
+  ansible_become_pass: Veer12345@
 
   
   roles:
