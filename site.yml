@@ -4,7 +4,7 @@
   remote_user: root
   become: yes
   become_method: sudo
-  become_user: nobody
+  become_user: root
 
   
   roles:
