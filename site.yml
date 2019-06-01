@@ -4,9 +4,9 @@
 #  connection: local
   remote_user: ansible
   become: yes
-  become_method: sudo
+  become_method: su
 #  key_name: saplabs.ppk
-#  become_user: root
+  become_user: root
 
   
   roles:
