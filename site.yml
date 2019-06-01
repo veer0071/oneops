@@ -2,9 +2,9 @@
 # file: ansible
 - hosts: all
 #  connection: local
-#  remote_user: ec2-user
+  remote_user: ansible
   become: yes
-#  become_method: sudo
+  become_method: sudo
 #  key_name: saplabs.ppk
 #  become_user: root
 
