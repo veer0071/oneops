@@ -1,6 +1,6 @@
 ---
 # file: webservers.yml
-- hosts: localhost
+- hosts: all
   become: true
   become_method: su
   become_user: ansible
