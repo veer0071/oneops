@@ -1,9 +1,9 @@
- ---
+---
 # file: webservers.yml
 - hosts: localhost
   become: true
+  become_method: sudo
   become_user: ansible
-  become_method: sudo 
 
   roles:
     - dir
