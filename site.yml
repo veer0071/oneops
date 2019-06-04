@@ -8,7 +8,11 @@
  
   roles:
     - dir
-  #  - tomcat
+    # - webtier
+
+  # roles:
+  #   - dir
+  # #  - tomcat
   #  - java
   #  - docker
   #  - maven
