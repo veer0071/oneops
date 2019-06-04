@@ -1,13 +1,12 @@
 ---
-- name: Testing...
+- name: localhost
   hosts: all
   become: true
   become_user: ansible
   become_method: sudo
 
    roles:
-     - dir
-     # - webtier
+    - common
 
 
 
