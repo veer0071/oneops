@@ -2,8 +2,8 @@
 # file: webservers.yml
 - hosts: localhost
   become: true
-  become_method: sudo
-  become_user: root
+  become_method: su
+  become_user: ansible
 
 
   roles:
