@@ -1,22 +1,11 @@
 ---
-# # file: ansible
-# - hosts: all
-#   remote_user: root
-#   become: yes
-#   become_method: su
-#   become_user: root
-
-- hosts: all
-  remote_user: root
-  vars:
-    authorized_key_list:
-      - name: root
-        authorized_keys:
-         - key: "{{ lookup('file', '/home/ansible/.ssh/authorized_keys') }}"
-           state: present
-
-
-  
+ file: ansible
+ - hosts: all
+   remote_user: root
+   become: yes
+   become_method: su
+   become_user: root
+ 
   roles:
     - dir
   #  - tomcat
