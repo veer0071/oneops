@@ -1,13 +1,12 @@
----
-- name: localhost
-  hosts: all
+ ---
+# file: webservers.yml
+- hosts: localhost
   become: true
   become_user: ansible
-  become_method: sudo
+  become_method: sudo 
 
-   roles:
-    - common
-
+  roles:
+    - dir
 
 
 
