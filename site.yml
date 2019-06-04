@@ -1,19 +1,28 @@
- ---
-#   file: ansible
- - hosts: all
-   remote_user: root
-   become: yes
-   become_method: su
-   become_user: root
- 
+---
+# file: site.yml
+- hosts: localhost
   roles:
     - dir
-    # - webtier
 
-  # roles:
-  #   - dir
-  # #  - tomcat
-  #  - java
-  #  - docker
-  #  - maven
-#    - webtier
+
+
+
+#  ---
+# # file: ansible
+#  - hosts: all
+#    remote_user: root
+#    become: yes
+#    become_method: su
+#    become_user: root
+ 
+#   roles:
+#     - dir
+#     # - webtier
+
+#   # roles:
+#   #   - dir
+#   # #  - tomcat
+#   #  - java
+#   #  - docker
+#   #  - maven
+# #    - webtier
