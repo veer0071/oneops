@@ -1,13 +1,10 @@
 ---
 # file: ansible
 - hosts: all
-#  connection: local
-  remote_user: ansible
+  remote_user: root
   become: yes
   become_method: su
-#  key_name: saplabs.ppk
   become_user: root
-  any_errors_fatal: true
 
   
   roles:
