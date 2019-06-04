@@ -1,10 +1,20 @@
 ---
-# file: ansible
+# # file: ansible
+# - hosts: all
+#   remote_user: root
+#   become: yes
+#   become_method: su
+#   become_user: root
+
 - hosts: all
   remote_user: root
-  become: yes
-  become_method: su
-  become_user: root
+  vars:
+    authorized_key_list:
+      - name: root
+        authorized_keys:
+         - key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+           state: present
+
 
   
   roles:
