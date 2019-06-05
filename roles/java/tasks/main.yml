@@ -1,4 +1,5 @@
-- name: correct java version selected
-  alternatives:
-    name: java
-    path: /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+- name: download & install tomcat
+  yum:
+    name: java-1.8.0-openjdk-devel
+    state: present
+
