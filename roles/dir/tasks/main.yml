@@ -1,9 +1,9 @@
-# - name: Creates directory
-#   file:
-#     path: /test/tomcat
-#     state: directory
+ - name: Creates directory
+   file:
+     path: /u01/tomcat
+     state: directory
 
-- name: Creates directory - home of ansible
-  file:
-    path: /home/ansible/testing
-    state: absent
+# - name: Creates directory - home of ansible
+#   file:
+#     path: /home/ansible/testing
+#     state: absent
