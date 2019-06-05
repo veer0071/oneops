@@ -1,0 +1,13 @@
+# ---
+
+# environment: staging
+# apache_port: 80
+
+# ## "{{ apache_port }}"
+
+# wordpress:
+#   mysql_host: 127.0.0.1
+#   mysql_admin_user: root
+#   mysql_admin_password: password_jhjh
+
+# ## "{{ wordpress.mysql_host }}"

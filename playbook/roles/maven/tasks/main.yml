@@ -1,0 +1,9 @@
+- name: install latest maven verion
+yum: 
+  name: maven
+  state: latest
+
+  - name: Creates directory
+  file:
+    path: /opt/
+    state: directory

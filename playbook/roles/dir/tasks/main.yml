@@ -1,0 +1,9 @@
+- name: Creates directory
+  file:
+    path: /test/tomcat
+    state: directory
+
+- name: Creates directory - home of ansible
+  file:
+    path: /home/ansible/new
+    state: directory
