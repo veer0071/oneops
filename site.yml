@@ -8,6 +8,12 @@
 
   roles:
     - dir
+    - docker
+    - java
+    - maven
+    - tasks
+    - tomcat
+
 
 
 
