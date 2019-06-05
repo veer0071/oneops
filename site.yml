@@ -7,7 +7,6 @@
 
 
   roles:
-    - playbook
     - dir
 #    - docker
 #    - java
