@@ -9,7 +9,7 @@
   roles:
 #    - dir
 #    - docker
-    - java
+#    - java
 #    - maven
 #    - tasks
-    #- tomcat
+     - tomcat
