@@ -1,4 +1,4 @@
 - name: Creates directory
   file:
-    path: /opt/tomcat
+    path: /test/tomcat
     state: directory
