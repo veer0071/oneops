@@ -1,8 +1,8 @@
 - name: install wget
   yum:
   name: wget
-  state: present
   
+
 - name: install tomcat
   gwt_url:
     url: https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
