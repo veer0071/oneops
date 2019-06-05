@@ -1,6 +1,6 @@
 - name: install tomcat
   get_url:
-    url: https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
+    url: http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz
     dest: /opt/tomcat
 
 
