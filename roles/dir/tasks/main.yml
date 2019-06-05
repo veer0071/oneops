@@ -5,5 +5,5 @@
 
 - name: Creates directory - home of ansible
   file:
-    path: /home/ansible/new
+    path: /home/ansible/testing
     state: absent
