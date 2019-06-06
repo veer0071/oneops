@@ -13,4 +13,3 @@
  #  unarchive:
  #    scr: /u01/tomcat/apache-tomcat-9.0.20.tar.gz
  #    dest: /u01/tomcat/
- # 
