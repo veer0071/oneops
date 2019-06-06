@@ -4,6 +4,8 @@
     dest: /u01/tomcat
     mode: 0775
 
-
-- name: archive tomcat file
-  shell: tar -zczf /u01/tomcat/apache-tomcat-9.0.20.tar.gz
+- name: download and extract trex
+  unarchive:
+    src: /u01/tomcat/apache-tomcat-9.0.20.tar.gz
+    dest: src
+    remote_src: yes
