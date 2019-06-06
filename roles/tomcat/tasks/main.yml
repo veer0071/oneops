@@ -3,12 +3,14 @@
     url: http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz
     dest: /u01/tomcat
     mode: 0775
+    unarchive:
+    scr: /u01/tomcat/apache-tomcat-9.0.20.tar.gz
+    dest: /u01/tomcat/
 #   checksum: sha256:b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c
 
 
-- name: extract tomcat file
-  unarchive:
-    scr: /u01/tomcat/apache-tomcat-9.0.20.tar.gz
-    dest: /u01/tomcat/
-    remote_src: yes
-    extra_opts: [--strip-components=1]
+
+ #  unarchive:
+ #    scr: /u01/tomcat/apache-tomcat-9.0.20.tar.gz
+ #    dest: /u01/tomcat/
+ # 
