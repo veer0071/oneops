@@ -8,5 +8,5 @@
 
 - name: extract tomcat file
   unarchive:
-    scr: /u01/tomcat/apache-tomcat-8.5.37.tar.gz
+    scr: apache-tomcat-8.5.37.tar.gz
     dest: /u01/tomcat/
