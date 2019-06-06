@@ -8,6 +8,6 @@
 
 - name: extract tomcat file
   unarchive:
-    scr: /u01/tomcat/apache-tomcat-8.5.37.tar.gz
-    dest: /u01/tomcat/apache-tomcat-8.5.37
+    scr: http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz
+    dest: /u01/tomcat/
     remote_src: yes
