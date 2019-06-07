@@ -1,8 +1,7 @@
-# name: create maven directory
-- file:
-    path: /home/ansible/maven
-    state: directory
-    mode: 0755
+ - name: Creates directory
+   file:
+     path: /home/ansible/maven
+     state: directory
 
 - name: install maven 
   get_url: http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
