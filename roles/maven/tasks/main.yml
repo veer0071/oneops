@@ -4,8 +4,17 @@
      state: directory
 
 # - name: install maven
-
 #   get_url: http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
 #   dest: /home/ansible/maven/apache-maven-3.5.4-bin.tar.gz
 #   scr: /home/ansible/maven
 #   remote_src: yes
+
+- name: Download Apache Maven
+  get_url: url=http://apache.claz.org/maven/maven-3/3.1.1/binaries/apache-maven--bin.tar.gz dest=/tmp/apache-maven--bin.tar.gz
+
+
+  - name: Untar Maven 
+  shell: chdir=/tmp creates=/home/ansible/maven/apache-maven-3.1.1 tar -zxf apache-maven-3.1.1-bin.tar.gz -C /home/ansible/maven
+
+  - name: Update path for maven use
+  shell: export PATH=/home /ansible/maven/apache-maven-3.1.1/bin:$PATH
