@@ -1,6 +1,6 @@
-- name: install tomcat dependency packages
+- name: install httpd dependency packages
   yum:
-    name: tomcat-native.x86_64
+    name: httpd
     state: latest
 
 
