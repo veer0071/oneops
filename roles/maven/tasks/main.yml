@@ -9,12 +9,19 @@
 #   scr: /home/ansible/maven
 #   remote_src: yes
 
-- name: Download Apache Maven
-  get_url: url=http://apache.claz.org/maven/maven-3/3.1.1/binaries/apache-maven--bin.tar.gz dest=/tmp/apache-maven--bin.tar.gz
+# - name: Download Apache Maven
+#   get_url: url=http://apache.claz.org/maven/maven-3/3.1.1/binaries/apache-maven--bin.tar.gz dest=/tmp/apache-maven--bin.tar.gz
 
 
-  - name: Untar Maven 
-  shell: chdir=/tmp creates=/home/ansible/maven/apache-maven-3.1.1 tar -zxf apache-maven-3.1.1-bin.tar.gz -C /home/ansible/maven
+#   - name: Untar Maven 
+#   shell: chdir=/tmp creates=/home/ansible/maven/apache-maven-3.1.1 tar -zxf apache-maven-3.1.1-bin.tar.gz -C /home/ansible/maven
 
-  - name: Update path for maven use
-  shell: export PATH=/home /ansible/maven/apache-maven-3.1.1/bin:$PATH
+#   - name: Update path for maven use
+#   shell: export PATH=/home /ansible/maven/apache-maven-3.1.1/bin:$PATH
+
+
+  - name: install maven (and other packages if needed)
+  become: yes
+  yum: pkg={{ item }} state=latest update_cache=yes cache_valid_time=3600
+  with_items:
+    - maven
