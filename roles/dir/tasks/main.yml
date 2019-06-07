@@ -1,6 +1,6 @@
  - name: Creates directory
    file:
-     path: /u01/tomcat
+     path: /home/ansible/tomcat
      state: directory
 
 # - name: Creates directory - home of ansible

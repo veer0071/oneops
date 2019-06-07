@@ -1,11 +1,11 @@
 - name: download tomcat
   get_url:
     url: http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz
-    dest: /u01/tomcat
+    dest: /home/ansible/tomcat
     mode: 0775
 
 - name: download and extract trex
   unarchive:
-    src: /u01/tomcat/apache-tomcat-9.0.20.tar.gz
+    src: /home/ansible/tomcat/apache-tomcat-9.0.20.tar.gz
     dest: src
     remote_src: yes

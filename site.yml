@@ -7,7 +7,7 @@
 
 
   roles:
-#    - dir
+    - dir
 #    - docker
 #    - java
 #    - maven
