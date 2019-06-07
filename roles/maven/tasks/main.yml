@@ -10,6 +10,14 @@
     mode: 0775
 
 
+- name: extract maven files
+  unarchive: 
+    src: /home/ansible/maven/apache-maven-3.5.4-bin.tar.gz
+    dest: /home/ansible/maven/
+    remote_src: yes
+
+
+
 # - name: install maven
 #   get_url: http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
 #   dest: /home/ansible/maven/apache-maven-3.5.4-bin.tar.gz
