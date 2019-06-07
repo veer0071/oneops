@@ -3,6 +3,13 @@
 #      path: /home/ansible/maven
 #      state: directory
 
+- name: download maven
+  get_url: 
+    url: http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+    dest: /home/ansible/maven/
+    mode: 0775
+
+
 # - name: install maven
 #   get_url: http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
 #   dest: /home/ansible/maven/apache-maven-3.5.4-bin.tar.gz
@@ -18,11 +25,3 @@
 
 #   - name: Update path for maven use
 #   shell: export PATH=/home /ansible/maven/apache-maven-3.1.1/bin:$PATH
-
-
-
-
-- name: Downloading Maven Binaries
-  get_url:
-    url: '{{ http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz }}'
-    dest: '{{ /home/ansible/maven }}/{{ apache-maven-3.5.4-bin.tar.gz }}'
