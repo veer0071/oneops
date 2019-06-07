@@ -1,9 +1,3 @@
-- name: install httpd dependency packages
-  yum:
-    name: httpd
-    state: latest
-
-
 - name: download tomcat
   get_url:
     url: http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz
