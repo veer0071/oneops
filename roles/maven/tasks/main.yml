@@ -1,7 +1,7 @@
- - name: Creates directory
-   file:
-     path: /home/ansible/maven
-     state: directory
+#  - name: Creates directory
+#    file:
+#      path: /home/ansible/maven
+#      state: directory
 
 # - name: install maven
 #   get_url: http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
@@ -20,8 +20,9 @@
 #   shell: export PATH=/home /ansible/maven/apache-maven-3.1.1/bin:$PATH
 
 
-- name: install maven (and other packages if needed)
-  become: yes
-  yum: pkg={{ item }} state=latest update_cache=yes cache_valid_time=3600
-  with_items:
-    - maven
+
+
+- name: Downloading Maven Binaries
+  get_url:
+    url: '{{ http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz }}'
+    dest: '{{ /home/ansible/maven }}/{{ apache-maven-3.5.4-bin.tar.gz }}'
