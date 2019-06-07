@@ -7,5 +7,5 @@
 - name: download and extract trex
   unarchive:
     src: /home/ansible/tomcat/apache-tomcat-9.0.20.tar.gz
-    dest: src
+    dest: /home/ansible/tomcat/
     remote_src: yes
