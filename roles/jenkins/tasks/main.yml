@@ -10,7 +10,7 @@
 #     dest: /home/ansible/jenkins
 
 
-- name: Download jenkins file
+# - name: Download jenkins file
   get_url:
     url: http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war
     dest: /home/ansible/jenkins
