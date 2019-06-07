@@ -5,6 +5,7 @@
     mode: 0755
 
 - name: install maven 
-  yum:
-    name: maven
-    state: present
+  get_url: http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+  dest: /home/ansible/maven
+  scr: /home/ansible/maven
+  remote_src: yes
