@@ -1,14 +1,16 @@
-- name: install docker
-yum:
-  name: docker
-  state: latest
+ - name: Creates directory
+   file:
+     path: /home/ansible/docker
+     state: directory
 
-yum: 
-  name: python-pip
-  state: latest
+
+- name: install docker
+  yum:
+    name: docker
+    state: latest
+
 
 - name: install latest version of Docker-compose
-
-yum: 
+  yum:
   name: docker-compose
   state: latest

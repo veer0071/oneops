@@ -8,10 +8,10 @@
 
   roles:
 #    - dir
-#    - docker
+     - docker
 #    - java
-     - jenkins
-     - maven
+#     - jenkins
+#     - maven
 #    - tasks
 #    - tomcat
 #    - jenkins
