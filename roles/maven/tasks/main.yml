@@ -20,7 +20,7 @@
 #   shell: export PATH=/home /ansible/maven/apache-maven-3.1.1/bin:$PATH
 
 
-  - name: install maven (and other packages if needed)
+- name: install maven (and other packages if needed)
   become: yes
   yum: pkg={{ item }} state=latest update_cache=yes cache_valid_time=3600
   with_items:
