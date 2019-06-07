@@ -7,9 +7,9 @@
 
 
   roles:
-    - dir
+#    - dir
 #    - docker
 #    - java
-#    - maven
+    - maven
 #    - tasks
-    - tomcat
+#    - tomcat

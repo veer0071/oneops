@@ -1,5 +1,10 @@
-# name: create directory
+# name: create maven directory
 - file:
-    path: /opt/tomcat
+    path: /home/ansible/maven
     state: directory
     mode: 0755
+
+- name: install maven 
+  yum:
+    name: maven
+    state: present
