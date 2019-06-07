@@ -3,18 +3,26 @@
 #      path: /home/ansible/maven
 #      state: directory
 
+# - name: download maven
+#   get_url: 
+#     url: http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+#     dest: /home/ansible/maven/
+#     mode: 0775
+
+
+# - name: extract maven files
+#   unarchive: 
+#     src: /home/ansible/maven/apache-maven-3.5.4-bin.tar.gz
+#     dest: /home/ansible/maven/
+#     remote_src: yes
+
+
+
 - name: download maven
   get_url: 
-    url: http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
-    dest: /home/ansible/maven/
+    url: http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war
+    dest: /home/ansible/jenkins/
     mode: 0775
-
-
-- name: extract maven files
-  unarchive: 
-    src: /home/ansible/maven/apache-maven-3.5.4-bin.tar.gz
-    dest: /home/ansible/maven/
-    remote_src: yes
 
 
 

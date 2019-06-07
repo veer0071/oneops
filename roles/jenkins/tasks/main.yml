@@ -9,11 +9,11 @@
 #     url: http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war
 #     dest: /home/ansible/jenkins
 
-- name: download jenkins
-  get_url: 
-    url: http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war
-    dest: /home/ansible/jenkins/
-    mode: 0775
+# - name: download jenkins
+#   get_url: 
+#     url: http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war
+#     dest: /home/ansible/jenkins/
+#     mode: 0775
 
 
 # - name: extract jenkin tar file
