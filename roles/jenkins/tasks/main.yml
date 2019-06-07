@@ -1,0 +1,17 @@
+ - name: Creates directory
+   file:
+     path: /home/ansible/jenkins
+     state: directory
+
+
+- name: download jenkins file
+  get_url:
+    url: http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war
+    dest: /home/ansible/jenkins
+
+
+# - name: extract jenkin tar file
+#   unarchive: 
+#     src: /home/ansible/maven/apache-maven-3.5.4-bin.tar.gz
+#     dest: /home/ansible/maven/
+#     remote_src: yes

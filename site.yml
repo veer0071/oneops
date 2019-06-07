@@ -10,6 +10,7 @@
 #    - dir
 #    - docker
 #    - java
-    - maven
+#    - maven
 #    - tasks
 #    - tomcat
+     - jenkins
