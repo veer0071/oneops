@@ -9,16 +9,16 @@
  #    name: docker
  #    state: absent
 
- - name: install docker using pip
-   pip:
-    name: docker
-    state: latest
+ # - name: install docker using pip
+ #   pip:
+ #    name: docker
+ #    state: latest
 
 # handlers file for docker-example
-#  - name: restart-docker-service
-#    service:
-#     name: docker
-#     state: restarted
+ - name: restart-docker-service
+   service:
+    name: docker
+    state: restarted
  
 # # pulling docker image
 #  - name:  pull docker images from docker hub
