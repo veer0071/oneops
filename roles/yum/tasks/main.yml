@@ -1,4 +1,4 @@
 - name: install packages
   yum: 
-    name: pip, mlocate, wget, unzip 
+    name: python-pip, mlocate, wget, unzip 
     state: latest
