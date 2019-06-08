@@ -15,19 +15,19 @@
     state: latest
 
 # handlers file for docker-example
- - name: restart-docker-service
-   service:
-    name: docker
-    state: restarted
+#  - name: restart-docker-service
+#    service:
+#     name: docker
+#     state: restarted
  
-# pulling docker image
- - name:  pull docker images from docker hub
-   docker_image: 
-    name: centos-7
-    source: pull
+# # pulling docker image
+#  - name:  pull docker images from docker hub
+#    docker_image: 
+#     name: centos-7
+#     source: pull
 
-# Installing docker-compose
- - name: install latest version of Docker-compose
-   yum:
-    name: docker-compose
-    state: latest
+# # Installing docker-compose
+#  - name: install latest version of Docker-compose
+#    yum:
+#     name: docker-compose
+#     state: latest
