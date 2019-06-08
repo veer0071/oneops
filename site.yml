@@ -1,7 +1,7 @@
 ---
 # file: webservers.yml
 - hosts: all
-  become: yes
+  become: true
   become_method: sudo
   become_user: ansible
   become_flags: '-s /bin/sh'
@@ -9,10 +9,11 @@
 
   roles:
 #    - dir
-     - docker
+#    - docker
 #    - java
-#     - jenkins
-#     - maven
+#    - jenkins
+#    - maven
 #    - tasks
 #    - tomcat
 #    - jenkins
+     - update
