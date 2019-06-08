@@ -1,4 +1,4 @@
 - name: install nginx
   yum: 
-    name:  nginx, python-pip, python-devel, devel
+    name:  nginx, python-pip, python-devel
     state: present
