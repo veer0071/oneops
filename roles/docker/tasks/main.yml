@@ -8,14 +8,14 @@
    yum:
     name: httpd
     state: latest
-
+# handlers file for docker-example
+ - name: restart-docker-service
+   service:
+    name: docker
+    state: restarted
+    
 # - name: install latest version of Docker-compose
 #   yum:
 #   name: docker-compose
 #   state: latest
 
-# handlers file for docker-example
-  - name: restart-docker-service
-    service:
-      name: docker
-      state: restarted
