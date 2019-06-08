@@ -8,9 +8,8 @@
   yum:
     name: docker
     state: latest
-
-
-- name: install latest version of Docker-compose
-  yum:
-  name: docker-compose
-  state: latest
+  
+# - name: install latest version of Docker-compose
+#   yum:
+#   name: docker-compose
+#   state: latest
