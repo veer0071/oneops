@@ -1,9 +1,9 @@
 ---
 # file: webservers.yml
 - hosts: all
-  become: yes
+#  become: yes
   become_method: sudo
-  become_user: ansible
+  become_user: root
 
 
   roles:
