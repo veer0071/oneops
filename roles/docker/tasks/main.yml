@@ -13,3 +13,9 @@
 #   yum:
 #   name: docker-compose
 #   state: latest
+
+# handlers file for docker-example
+  - name: restart-docker-service
+    service:
+      name: docker
+      state: restarted
