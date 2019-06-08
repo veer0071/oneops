@@ -4,11 +4,11 @@
      state: directory
 
 
-- name: install docker
-  yum:
+ - name: install docker
+   yum:
     name: docker
     state: latest
-  
+
 # - name: install latest version of Docker-compose
 #   yum:
 #   name: docker-compose
