@@ -6,7 +6,7 @@
 
  - name: install docker
    yum:
-    name: docker
+    name: httpd
     state: latest
 
 # - name: install latest version of Docker-compose
