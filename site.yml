@@ -9,12 +9,12 @@
 
   roles:
 #    - dir
-    - docker
+#    - docker
 #    - java
 #    - jenkins
 #    - maven
 #    - tasks
-#    - tomcat
+     - tomcat
 #    - jenkins
 #    - update
 #    - nginx
