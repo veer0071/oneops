@@ -1,0 +1,4 @@
+- name: install packages
+  yum: 
+    name: pip, mlocate, wget, unzip 
+    state: latest

@@ -1,4 +1,0 @@
-- name: update centos
-  yum:
-    name: '*'
-    state: latest
