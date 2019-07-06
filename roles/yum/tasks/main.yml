@@ -3,7 +3,9 @@
 #     name: python-pip, mlocate, wget, unzip 
 #     state: latest
 
-- name: install packages
+- name: update centos
   yum: 
     name: '*'
     state: latest
+    become: yes
+    

@@ -10,7 +10,7 @@
 #     mode: 0775
 
 
-- name: Creates tomcat directory 
+- name: Creates splunk directory 
   file:
     path: /mnt/splunk
     state: directory
