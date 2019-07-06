@@ -8,14 +8,14 @@
 
 
   roles:
-#    - dir
-#    - docker
-#    - java
-#    - jenkins
-#    - maven
-#    - tasks
-#     - tomcat
-#    - jenkins
-#    - update
-#    - nginx
-#     - yum
+    - dir
+    - docker
+    - java
+    - jenkins
+    - maven
+    - tasks
+     - tomcat
+    - jenkins
+    - update
+    - nginx
+     - yum
