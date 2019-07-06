@@ -14,8 +14,8 @@
     - jenkins
     - maven
     - tasks
-     - tomcat
+    - tomcat
     - jenkins
     - update
     - nginx
-     - yum
+    - yum
