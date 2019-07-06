@@ -8,9 +8,9 @@
 
 
   roles:
-     - dir
+  #   - dir
   #  - user
-     - yum  
+  #   - yum  
   #  - docker
   #  - java
   #  - jenkins
