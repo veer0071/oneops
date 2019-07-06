@@ -9,13 +9,14 @@
 
   roles:
      - dir
-     - yum  
+     - user
+  #   - yum  
   #  - docker
   #  - java
   #  - jenkins
   #  - maven
   #  - tasks
-     - tomcat
+  #   - tomcat
   #  - jenkins
   #  - nginx
      - splunk
