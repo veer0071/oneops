@@ -12,7 +12,7 @@
   #  - user
   #   - yum  
   #  - docker
-  #  - java
+     - java
   #  - jenkins
   #  - maven
   #  - tasks
