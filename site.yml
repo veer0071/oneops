@@ -8,13 +8,13 @@
 
 
   roles:
-  #  - dir
+     - dir
+     - yum  
   #  - docker
   #  - java
   #  - jenkins
   #  - maven
   #  - tasks
-    - tomcat
+     - tomcat
   #  - jenkins
-    - nginx
-    - yum
+  #  - nginx

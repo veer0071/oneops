@@ -1,16 +1,16 @@
 - name: download tomcat
   get_url:
     url: http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20.tar.gz
-    dest: /home/ansible/tomcat
+    dest: /opt/tomcat
     mode: 0775
 
 - name: download and extract trex
   unarchive:
     src: /home/ansible/tomcat/apache-tomcat-9.0.20.tar.gz
-    dest: /home/ansible/tomcat/
+    dest: /opt/tomcat
     remote_src: yes
 
 
 
 - name: execute start.sh file
-  command: sh /home/ansible/tomcat/apache-tomcat-9.0.20/bin/startup.sh
+  command: sh /opt/tomcat/apache-tomcat-9.0.20/bin/startup.sh

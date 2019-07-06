@@ -1,9 +1,10 @@
- - name: Creates directory
-   file:
-     path: /home/ansible/tomcat
-     state: directory
+ # - name: Creates directory
+ #   file:
+ #     path: /home/ansible/tomcat
+ #     state: directory
 
-# - name: Creates directory - home of ansible
-#   file:
-#     path: /home/ansible/testing
-#     state: absent
+- name: Creates tomcat directory 
+  file:
+    path: /opt/tomcat
+    state: directory
+    mode: 0775
