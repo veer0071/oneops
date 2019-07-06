@@ -12,6 +12,6 @@
 
 - name: Creates tomcat directory 
   file:
-    path: /opt/splunk
+    path: /mnt/splunk
     state: directory
     mode: 0775

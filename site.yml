@@ -9,7 +9,7 @@
 
   roles:
      - dir
-     - user
+  #  - user
      - yum  
   #  - docker
   #  - java
