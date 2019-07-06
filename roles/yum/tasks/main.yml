@@ -2,3 +2,8 @@
   yum: 
     name: python-pip, mlocate, wget, unzip 
     state: latest
+
+- name: install packages
+  yum: 
+    name: '*'
+    state: latest

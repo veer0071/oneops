@@ -9,7 +9,7 @@
 
   roles:
     - dir
-    - docker
+  #  - docker
     - java
     - jenkins
     - maven
