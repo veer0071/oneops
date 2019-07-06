@@ -16,6 +16,5 @@
     - tasks
     - tomcat
     - jenkins
-    - update
     - nginx
     - yum
