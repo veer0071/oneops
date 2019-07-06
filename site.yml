@@ -8,15 +8,15 @@
 
 
   roles:
-  #   - dir
+  #  - dir
   #  - user
-  #   - yum  
+  #  - yum  
   #  - docker
-  #   - java
-  #  - jenkins
+  #  - java
+     - jenkins
   #  - maven
   #  - tasks
-     - tomcat
+  #  - tomcat
   #  - jenkins
   #  - nginx
-  #   - splunk
+  #  - splunk
