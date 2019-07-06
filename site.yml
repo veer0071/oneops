@@ -8,7 +8,7 @@
 
 
   roles:
-  #   - dir
+     - dir
   #  - user
   #   - yum  
   #  - docker
