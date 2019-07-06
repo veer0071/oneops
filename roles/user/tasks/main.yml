@@ -1,0 +1,19 @@
+- name: Ensure group "splunk" exists
+  group:
+    name: splunk
+    state: present
+
+
+- name: create the user 'splunk'
+  user:
+    name: splunk
+    state: present
+
+
+
+- name: Add the user 'splunk' with a specific uid and a primary group of 'splunk'
+  user:
+    name: splunk
+    comment: splunk
+    uid: 1040
+    group: splunk
