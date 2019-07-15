@@ -1,0 +1,13 @@
+- name: download jboss taz file
+  get_url:
+    url: http://sourceforge.net/projects/jboss/files/JBoss/JBoss-6.0.0.Final/jboss-as-distribution-6.0.0.Final.zip/download
+    dest: /opt/jboss
+    mode: 0775
+
+
+
+- name: extract jboss tar file
+  unarchive: 
+    src: /opt/jboss/jboss-as-distribution-6.0.0.Final.zip
+    dest: /opt/jboss/
+    remote_src: yes
