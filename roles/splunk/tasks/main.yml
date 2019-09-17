@@ -1,22 +1,22 @@
 - name: download splunk
   get_url:
     url: https://download.splunk.com/products/splunk/releases/7.3.0/linux/splunk-7.3.0-657388c7a488-Linux-x86_64.tgz
-    dest: /opt/splunk
+    dest: /mnt/splunk
     mode: 0775
 
 - name: download and extract splunk trz
   unarchive:
-    src: /opt/splunk/splunk-7.3.0-657388c7a488-Linux-x86_64.tgz
-    dest: /opt/splunk
+    src: /mnt/splunk/splunk-7.3.0-657388c7a488-Linux-x86_64.tgz
+    dest: /mnt/splunk
     remote_src: yes
 
 
 - name: splunk-7.3.0-657388c7a488-Linux-x86_64.tgz delete file example
   file:
-    path: /opt/splunk/apache-tomcat-9.0.20.tar.gz
+    path: /mnt/splunk/apache-tomcat-9.0.20.tar.gz
     state: absent
 
 
 
 - name: execute start.sh file
-  command: sh /opt/splunk/splunk/bin/splunk start
+  command: sh /mnt/splunk/splunk/bin/splunk start
