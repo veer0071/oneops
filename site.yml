@@ -8,7 +8,7 @@
 
 
   roles:
-     - dir
+  #  - dir
   #  - user
   #  - yum  
   #  - docker
@@ -20,4 +20,5 @@
   #  - jenkins
   #  - nginx
   #  - splunk
-     - jboss
+  #  - jboss
+     - httpd
