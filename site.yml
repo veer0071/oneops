@@ -19,5 +19,5 @@
   #  - tomcat
   #  - jenkins
   #  - nginx
-     - splunk
-  #  - jboss
+  #  - splunk
+     - jboss

@@ -8,6 +8,6 @@
 
 - name: extract jboss tar file
   unarchive: 
-    src: /opt/jboss/jboss-as-7.1.1.Final.zip
-    dest: /opt/jboss/
+    src: /mnt/jboss/jboss-as-7.1.1.Final.zip
+    dest: /mnt/jboss/
     remote_src: yes
