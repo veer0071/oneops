@@ -8,17 +8,17 @@
 
 
   roles:
-    - dir
-    - user
-    - yum  
-    - docker
-    - java
-    - jenkins
-    - maven
-    - tasks
-    - tomcat
-    - jenkins
-    - nginx
-    - splunk
-    - jboss
-    - httpd
+      - dir
+    # - user
+    # - yum  
+    # - docker
+    # - java
+    # - jenkins
+    # - maven
+    # - tasks
+      - tomcat
+    # - jenkins
+    # - nginx
+    # - splunk
+    # - jboss
+    # - httpd
