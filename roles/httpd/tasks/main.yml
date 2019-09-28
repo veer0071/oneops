@@ -1,11 +1,10 @@
 - name: Start service httpd, if not started
   service:
     name: httpd
-    state: latest
+    state: present
 
 
-
-- name: Start service httpd, if not started
+- name: ensure httpd is running
   service:
-    name: httpd
+    name: httpd 
     state: started
