@@ -1,31 +1,38 @@
- - name: Creates directory
-   file:
-     path: /home/ansible/tomcat
-     state: directory
-# 
+#  - name: Creates directory
+#    file:
+#      path: /home/ansible/tomcat
+#      state: directory
+# # 
+# - name: Creates tomcat directory 
+#   file:
+#     path: /opt/tomcat
+#     state: directory
+#     mode: 0775
+# # 
+# # 
+# - name: Creates jenkins directory 
+#   file:
+#     path: /opt/jenkins
+#     state: directory
+#     mode: 0775
+# # 
+# # 
+# - name: Creates splunk directory 
+#   file:
+#     path: /mnt/splunk
+#     state: directory
+#     mode: 0775
+# # 
+
+# - name: Creates jboss directory 
+#   file:
+#     path: /mnt/jboss
+#     state: directory
+#     mode: 0775
+
+
 - name: Creates tomcat directory 
   file:
-    path: /opt/tomcat
-    state: directory
-    mode: 0775
-# 
-# 
-- name: Creates jenkins directory 
-  file:
-    path: /opt/jenkins
-    state: directory
-    mode: 0775
-# 
-# 
-- name: Creates splunk directory 
-  file:
-    path: /mnt/splunk
-    state: directory
-    mode: 0775
-# 
-
-- name: Creates jboss directory 
-  file:
-    path: /mnt/jboss
+    path: /mnt/tomcat
     state: directory
     #mode: 0775
