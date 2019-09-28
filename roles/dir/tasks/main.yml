@@ -1,7 +1,7 @@
 #  - name: Creates directory
 #    file:
 #      path: /home/ansible/tomcat
-#      state: directory
+#      state: directory 
 # # 
 # - name: Creates tomcat directory 
 #   file:
