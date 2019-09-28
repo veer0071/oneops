@@ -8,11 +8,11 @@
 
 
   roles:
-      - dir
+    # - dir
     # - user
     # - yum  
     # - docker
-    # - java
+      - java
     # - jenkins
     # - maven
     # - tasks
