@@ -18,5 +18,12 @@
 
 
 
-- name: execute start.sh file
-  command: sh /mnt/splunk/splunk/bin/splunk start --accept-license
+- name: accept-license
+  tags:
+    - install
+  shell: /mnt/splunk/splunk/bin/splunk start --accept-license  
+
+- name: Enable init script
+  tags:
+    - install
+  shell: /mnt/splunk/splunk/bin/splunk enable boot-start  
