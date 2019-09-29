@@ -1,8 +1,8 @@
 - name: download jboss taz file
   get_url:
-    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
+    url: https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz
     dest: /mnt/jboss
-    mode: 0775
+    
 
 
 

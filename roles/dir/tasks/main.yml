@@ -17,22 +17,22 @@
 #     mode: 0775
 # # 
 # # 
-- name: Creates splunk directory 
-  file:
-    path: /mnt/splunk
-    state: directory
+# - name: Creates splunk directory 
+#   file:
+#     path: /mnt/splunk
+#     state: directory
 #    mode: 0775
 # # 
 
-# - name: Creates jboss directory 
-#   file:
-#     path: /mnt/jboss
-#     state: directory
-#     mode: 0775
-
-
-- name: Creates tomcat directory 
+- name: Creates jboss directory 
   file:
-    path: /mnt/tomcat
+    path: /mnt/jboss
     state: directory
-    #mode: 0775
+
+
+
+# - name: Creates tomcat directory 
+#   file:
+#     path: /mnt/tomcat
+#     state: directory
+#     #mode: 0775
