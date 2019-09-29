@@ -1,6 +1,6 @@
 - name: download jboss taz file
   get_url:
-    url: https:/download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
+    url: https://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
     dest: /mnt/jboss
     
 
