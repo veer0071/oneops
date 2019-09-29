@@ -20,7 +20,7 @@
 
 - name: Extract archive
   unarchive:
-    dest: /usr/share
+    dest: /mnt/jboss-as-7.1.1.Final.zip
     src: /mnt/jboss-as-7.1.1.Final.zip
     creates: /usr/share/jboss-as
     copy: no
