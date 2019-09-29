@@ -1,104 +1,140 @@
-# - name: download jboss taz file
+# # - name: download jboss taz file
+# #   get_url:
+# #     url: https:/download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
+# #     dest: /mnt/jboss
+    
+
+
+
+# # - name: extract jboss tar file
+# #   unarchive: 
+# #     src: /mnt/jboss/jboss-as-7.1.1.Final.tar.gz
+# #     dest: /mnt/jboss/
+# #     remote_src: yes
+
+
+# - name: Download JBoss from jboss.org
 #   get_url:
-#     url: https:/download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
-#     dest: /mnt/jboss
+#     url: https://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
+#     dest: /mnt/jboss/jboss-as-7.1.1.Final.zip
+
+# - name: Extract archive
+#   unarchive:
+#     src:  /mnt/jboss/jboss-as-7.1.1.Final.zip
+#     dest: /mnt/jboss/jboss-as-7.1.1.Final.zip
     
+#     # creates: /usr/share/jboss-as
+#     # copy: no
+
+#   # Rename the dir to avoid encoding the version in the init script
+# - name: Rename install directory
+#   command: /bin/mv jboss-as-7.1.1.Final jboss-as 
+#   args:
+#     chdir: /usr/share 
+#     creates: /usr/share/jboss-as
+
+# - name: Copying standalone.xml configuration file
+#   template:
+#     src: standalone.xml
+#     dest: /usr/share/jboss-as/standalone/configuration/
+#   notify: restart jboss
+
+# - name: Add group "jboss"
+#   group:
+#     name: jboss
+
+# - name: Add user "jboss"
+#   user:
+#     name: jboss
+#     group: jboss
+#     home: /usr/share/jboss-as
+
+# - name: Change ownership of JBoss installation
+#   file:
+#     path: /usr/share/jboss-as/
+#     owner: jboss
+#     group: jboss
+#     state: directory
+#     recurse: yes
+
+# - name: Copy the init script
+#   copy:
+#     src: jboss-as-standalone.sh
+#     dest: /etc/init.d/jboss
+#     mode: 0755
+
+# - name: Workaround for systemd bug
+#   shell: service jboss start && chkconfig jboss on
+#   ignore_errors: yes
+
+# - name: Enable JBoss to be started at boot
+#   service:
+#     name: jboss
+#     enabled: yes
+#     state: started
+
+# - name: deploy iptables rules
+#   template:
+#     src: iptables-save
+#     dest: /etc/sysconfig/iptables
+#   when: ansible_distribution_major_version != "7"
+#   notify: restart iptables
+
+# - name: Ensure that firewalld is installed
+#   yum:
+#     name: firewalld
+#     state: present
+#   when: ansible_distribution_major_version == "7"
+
+# - name: Ensure that firewalld is started
+#   service:
+#     name: firewalld
+#     state: started
+#   when: ansible_distribution_major_version == "7"
+
+# - name: deploy firewalld rules
+#   firewalld:
+#     immediate: yes
+#     port: "{{ item }}"
+#     state: enabled
+#     permanent: yes
+#   when: ansible_distribution_major_version == "7"
+#   with_items:
+#   - "{{ http_port }}/tcp"
+#   - "{{ https_port }}/tcp"
 
 
-
-# - name: extract jboss tar file
-#   unarchive: 
-#     src: /mnt/jboss/jboss-as-7.1.1.Final.tar.gz
-#     dest: /mnt/jboss/
-#     remote_src: yes
-
-
-- name: Download JBoss from jboss.org
-  get_url:
-    url: https://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip
-    dest: /mnt/jboss/jboss-as-7.1.1.Final.zip
-
+- name: Install Java 1.8 and some basic dependencies
+  yum: name={{item}} state=present
+  with_items:
+   - unzip
+   - java-1.8.0-openjdk
+  
+- name: Download WildFly from jboss.org
+  get_url: url=http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip dest=/opt/wildfly-10.0.0.Final.zip
+  
 - name: Extract archive
-  unarchive:
-    src:  /mnt/jboss/jboss-as-7.1.1.Final.zip
-    dest: /mnt/jboss/jboss-as-7.1.1.Final.zip
-    
-    # creates: /usr/share/jboss-as
-    # copy: no
-
+  command: chdir=/usr/share /usr/bin/unzip -q /opt/wildfly-10.0.0.Final.zip creates=/usr/share/jboss-as
+  
   # Rename the dir to avoid encoding the version in the init script
 - name: Rename install directory
-  command: /bin/mv jboss-as-7.1.1.Final jboss-as 
-  args:
-    chdir: /usr/share 
-    creates: /usr/share/jboss-as
-
+  command: chdir=/usr/share /bin/mv wildfly-10.0.0.Final jboss-as creates=/usr/share/jboss-as
+  
 - name: Copying standalone.xml configuration file
-  template:
-    src: standalone.xml
-    dest: /usr/share/jboss-as/standalone/configuration/
+  template: src=standalone.xml dest=/usr/share/jboss-as/standalone/configuration/
   notify: restart jboss
-
+  
 - name: Add group "jboss"
-  group:
-    name: jboss
-
+  group: name=jboss
+  
 - name: Add user "jboss"
-  user:
-    name: jboss
-    group: jboss
-    home: /usr/share/jboss-as
-
-- name: Change ownership of JBoss installation
-  file:
-    path: /usr/share/jboss-as/
-    owner: jboss
-    group: jboss
-    state: directory
-    recurse: yes
-
+  user: name=jboss group=jboss home=/usr/share/jboss-as
+  
+- name: Change ownership of WildFly installation
+  file: path=/usr/share/jboss-as/ owner=jboss group=jboss state=directory recurse=yes
+  
 - name: Copy the init script
-  copy:
-    src: jboss-as-standalone.sh
-    dest: /etc/init.d/jboss
-    mode: 0755
-
-- name: Workaround for systemd bug
-  shell: service jboss start && chkconfig jboss on
-  ignore_errors: yes
-
-- name: Enable JBoss to be started at boot
-  service:
-    name: jboss
-    enabled: yes
-    state: started
-
-- name: deploy iptables rules
-  template:
-    src: iptables-save
-    dest: /etc/sysconfig/iptables
-  when: ansible_distribution_major_version != "7"
-  notify: restart iptables
-
-- name: Ensure that firewalld is installed
-  yum:
-    name: firewalld
-    state: present
-  when: ansible_distribution_major_version == "7"
-
-- name: Ensure that firewalld is started
-  service:
-    name: firewalld
-    state: started
-  when: ansible_distribution_major_version == "7"
-
-- name: deploy firewalld rules
-  firewalld:
-    immediate: yes
-    port: "{{ item }}"
-    state: enabled
-    permanent: yes
-  when: ansible_distribution_major_version == "7"
-  with_items:
-  - "{{ http_port }}/tcp"
-  - "{{ https_port }}/tcp"
+  copy: src=wildfly-init-redhat.sh dest=/etc/init.d/jboss mode=0755
+  
+- name: Enable WildFly to be started at boot
+  service: name=jboss enabled=yes state=started
