@@ -1,6 +1,6 @@
 - name: download jboss taz file
   get_url:
-    url: https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz
+    url: https://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz
     dest: /mnt/jboss
     
 
@@ -8,6 +8,6 @@
 
 - name: extract jboss tar file
   unarchive: 
-    src: /mnt/jboss/jboss-as-7.1.1.Final.zip
+    src: /mnt/jboss/jboss-as-7.1.1.Final.tar.gz
     dest: /mnt/jboss/
     remote_src: yes
