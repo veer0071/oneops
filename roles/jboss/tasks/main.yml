@@ -22,8 +22,8 @@
   unarchive:
     dest: /mnt/jboss/jboss-as-7.1.1.Final.zip
     src: /mnt/jboss/jboss-as-7.1.1.Final.zip
-    creates: /usr/share/jboss-as
-    copy: no
+    # creates: /usr/share/jboss-as
+    # copy: no
 
   # Rename the dir to avoid encoding the version in the init script
 - name: Rename install directory
