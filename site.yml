@@ -16,9 +16,9 @@
     # - jenkins
     # - maven
     # - tasks
-      - tomcat
+    #  - tomcat
     # - jenkins
     # - nginx
-    # - splunk
+      - splunk
     # - jboss
     # - httpd
