@@ -24,4 +24,4 @@
 - name: execute start.sh file
   tags:
     - install
-  shell: sh /mnt/tomcat/apache-tomcat-8.5.46/bin/startup.sh 
+  shell: sh /mnt/tomcat/apache-tomcat-8.5.46/bin/startup.sh
