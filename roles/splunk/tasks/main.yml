@@ -23,7 +23,7 @@
     - install
   shell: /mnt/splunk/splunk/bin/splunk start --accept-license  
 
-# - name: Enable init script
-#   tags:
-#     - install
-#   shell: /mnt/splunk/splunk/bin/splunk enable boot-start  
+- name: Enable init script
+  tags:
+    - install
+  shell: /mnt/splunk/splunk/bin/splunk enable boot-start  
