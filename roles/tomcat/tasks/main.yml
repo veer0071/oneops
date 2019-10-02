@@ -1,21 +1,27 @@
-- name: download tomcat
-  get_url:
-    url: http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.46/bin/apache-tomcat-8.5.46.tar.gz
-    dest: /mnt/tomcat
-#    mode: 0775
+# - name: download tomcat
+#   get_url:
+#     url: http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.46/bin/apache-tomcat-8.5.46.tar.gz
+#     dest: /mnt/tomcat
+# #    mode: 0775
 
-- name: download and extract trex
-  unarchive:
-    src: /mnt/tomcat/apache-tomcat-8.5.46.tar.gz
-    dest: /mnt/tomcat
-    remote_src: yes
+# - name: download and extract trex
+#   unarchive:
+#     src: /mnt/tomcat/apache-tomcat-8.5.46.tar.gz
+#     dest: /mnt/tomcat
+#     remote_src: yes
 
 
 
-- name: apache-tomcat-8.5.46.tar.gz delete file example
-  file:
-    path: /mnt/tomcat/apache-tomcat-8.5.46.tar.gz
-    state: absent
+# - name: apache-tomcat-8.5.46.tar.gz delete file example
+#   file:
+#     path: /mnt/tomcat/apache-tomcat-8.5.46.tar.gz
+#     state: absent
+
+# - name: execute start.sh file
+#   command: sh /mnt/tomcat/apache-tomcat-8.5.46/bin/startup.sh
+
 
 - name: execute start.sh file
-  command: sh /mnt/tomcat/apache-tomcat-8.5.46/bin/startup.sh
+  tags:
+    - install
+  shell: sh /mnt/tomcat/apache-tomcat-8.5.46/bin/startup.sh 
