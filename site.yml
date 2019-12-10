@@ -8,10 +8,10 @@
 
 
   roles:
-    # - dir
+      - dir
     # - user
     # - yum  
-    # - docker
+      - docker
     # - java
     # - jenkins
     # - maven
@@ -19,6 +19,6 @@
     #  - tomcat
     # - jenkins
     # - nginx
-      - splunk
+    #  - splunk
     # - jboss
     # - httpd

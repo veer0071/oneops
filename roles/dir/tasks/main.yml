@@ -24,11 +24,16 @@
 #    mode: 0775
 # # 
 
-- name: Creates jboss directory 
-  file:
-    path: /mnt/jboss
-    state: directory
+# - name: Creates jboss directory 
+#   file:
+#     path: /mnt/jboss
+#     state: directory
 
+
+- name: Creates docker directory 
+  file:
+    path: /mnt/docker
+    state: directory
 
 
 # - name: Creates tomcat directory 
