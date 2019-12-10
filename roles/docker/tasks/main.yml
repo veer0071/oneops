@@ -21,13 +21,20 @@
  #    state: restarted
  
 # # pulling docker image
- - name:  pull docker images from docker hub
-   docker_image: 
-    name: centos
-    source: pull
+ # - name:  pull docker images from docker hub
+ #   docker_image: 
+ #    name: centos
+ #    source: pull
 
 # # Installing docker-compose
  # - name: install latest version of Docker-compose
  #   yum:
  #    name: docker-compose
  #    state: latest
+
+
+
+ - name: pull an image
+   docker_image:
+    name: pacur/centos-7
+    source: pull
