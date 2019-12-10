@@ -34,7 +34,10 @@
 
 
 
- - name: pull an image
-   docker_image:
-    name: pacur/centos-7
-    source: pull
+ # - name: pull an image
+ #   docker_image:
+ #    name: pacur/centos-7
+ #    source: pull
+
+ - name: Install docker-py
+      pip: name=docker-py
