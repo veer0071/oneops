@@ -11,7 +11,7 @@
       - dir
     # - user
     # - yum  
-      - docker
+    #  - docker
     # - java
     # - jenkins
     # - maven
