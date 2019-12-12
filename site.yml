@@ -11,14 +11,14 @@
       - dir
     # - user
     # - yum  
-    #  - docker
+    # - docker
     # - java
     # - jenkins
     # - maven
     # - tasks
-    #  - tomcat
+    # - tomcat
     # - jenkins
     # - nginx
-    #  - splunk
+      - splunk
     # - jboss
     # - httpd
