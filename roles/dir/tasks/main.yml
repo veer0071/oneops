@@ -17,10 +17,10 @@
 #     mode: 0775
 # # 
 # # 
-# - name: Creates splunk directory 
-#   file:
-#     path: /mnt/splunk
-#     state: directory
+- name: Creates splunk directory 
+  file:
+    path: /mnt/splunk
+    state: directory
 #    mode: 0775
 # # 
 
@@ -30,10 +30,10 @@
 #     state: directory
 
 
-- name: Creates docker directory 
-  file:
-    path: /mnt/docker
-    state: directory
+# - name: Creates docker directory 
+#   file:
+#     path: /mnt/docker
+#     state: directory
 
 
 # - name: Creates tomcat directory 
