@@ -21,7 +21,7 @@
 - name: accept-license
   tags:
     - install
-  shell: /mnt/splunk/splunk/bin/splunk start --accept-license  
+  shell: /opt/splunk/splunk/bin/splunk start --accept-license  
 
 # - name: Enable init script
 #   tags:
