@@ -4,11 +4,11 @@
     dest: /opt/splunk
 
 
-# - name: download and extract splunk trz
-#   unarchive:
-#     src: /mnt/splunk/splunk-7.3.0-657388c7a488-Linux-x86_64.tgz
-#     dest: /mnt/splunk
-#     remote_src: yes
+- name: download and extract splunk trz
+  unarchive:
+    src: /opt/splunk/splunk-7.3.0-657388c7a488-Linux-x86_64.tgz
+    dest: /opt/splunk
+    remote_src: yes
 
 
 # - name: splunk-7.3.0-657388c7a488-Linux-x86_64.tgz delete file example
