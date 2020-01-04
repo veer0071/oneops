@@ -10,17 +10,17 @@
 #     mode: 0775
 # # 
 # # 
-# - name: Creates jenkins directory 
-#   file:
-#     path: /opt/jenkins
-#     state: directory
-#     mode: 0775
-# # 
-# # 
-- name: Creates splunk directory 
+- name: Creates jenkins directory 
   file:
-    path: /opt/splunk
+    path: /opt/jenkins
     state: directory
+    mode: 0775
+# # 
+# # 
+# - name: Creates splunk directory 
+#   file:
+#     path: /opt/splunk
+#     state: directory
 #    mode: 0775
 # # 
 

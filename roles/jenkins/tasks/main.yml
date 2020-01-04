@@ -1,12 +1,12 @@
 - name: download jenkins
   get_url: 
     url: http://updates.jenkins-ci.org/download/war/2.7.3/jenkins.war
-    dest: /mnt/jenkins/
+    dest: /opt/jenkins/
     
 
 
 - name: extract jenkin tar file
   unarchive: 
-    src: /mnt/jenkins/apache-maven-3.5.4-bin.tar.gz
-    dest: /mnt/jenkins/
+    src: /opt/jenkins/apache-maven-3.5.4-bin.tar.gz
+    dest: /opt/jenkins/
     remote_src: yes
