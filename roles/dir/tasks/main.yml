@@ -40,5 +40,5 @@
   file:
     path: /opt/tomcat
     state: directory
-    #mode: 0775
+    mode: 0775
 
