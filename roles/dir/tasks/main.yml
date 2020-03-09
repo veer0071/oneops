@@ -36,14 +36,9 @@
 #     state: directory
 
 
-# - name: Creates tomcat directory 
-#   file:
-#     path: /mnt/tomcat
-#     state: directory
-#     #mode: 0775
-  
-  - name: Creates jenkins directory 
+- name: Creates terraform directory 
   file:
-    path: /opt/terraform
+    path: /mnt/terraform
     state: directory
-    mode: 0775
+    #mode: 0775
+
