@@ -8,7 +8,7 @@
 
 
   roles:
-    # - dir
+      - dir
     # - user
     # - yum  
     # - docker
@@ -16,10 +16,10 @@
     # - jenkins
     # - maven
     # - tasks
-    # - tomcat
+      - tomcat
     # - jenkins
     # - nginx
     # - splunk
     # - jboss
     # - httpd
-      - terraform
+    # - terraform
