@@ -3,9 +3,9 @@
     url: https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip
     dest:   /opt/terraform
 
-- name: unzip terraform
-  unarchive:  
-    scr:  /opt/terraform/terraform_0.11.13_linux_amd64.zip
-    dest: /usr/bin/local
-    remote_src: yes
+# - name: unzip terraform
+#   unarchive:  
+#     scr:  /opt/terraform/terraform_0.11.13_linux_amd64.zip
+#     dest: /usr/bin/local
+#     remote_src: yes
           
