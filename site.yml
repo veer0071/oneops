@@ -10,7 +10,7 @@
   roles:
       - dir
     # - user
-      - yum  
+    #  - yum  
     # - docker
     # - java
     # - jenkins
