@@ -1,7 +1,7 @@
 - name: download tomcat
   get_url:
     url: http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.51/bin/apache-tomcat-8.5.51.tar.gz
-    dest: /mnt/tomcat
+    dest: /opt/tomcat
 #    mode: 0775
 
 - name: download and extract trex
