@@ -17,11 +17,11 @@
     path: /opt/tomcat/apache-tomcat-8.5.51.tar.gz
     state: absent
 
-- name: execute start.sh file
-  command: sh /opt/tomcat/apache-tomcat-8.5.51.tar.gz/bin/startup.sh
+# - name: execute start.sh file
+#   command: sh /opt/tomcat/apache-tomcat-8.5.51.tar.gz/bin/startup.sh
 
 
 - name: execute start.sh file
   tags:
     - install
-  shell: sh /opt/tomcat/apache-tomcat-8.5.51.tar.gz/bin/startup.sh
+  shell: sh /opt/tomcat/apache-tomcat-8.5.51/bin/startup.sh
