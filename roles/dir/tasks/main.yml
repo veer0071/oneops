@@ -38,7 +38,7 @@
 
 - name: Creates terraform directory 
   file:
-    path: /mnt/terraform
+    path: /opt/terraform
     state: directory
     #mode: 0775
 
