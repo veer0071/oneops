@@ -3,12 +3,12 @@
 #      path: /home/ansible/tomcat
 #      state: directory 
 # # 
-# - name: Creates tomcat directory 
-#   file:
-#     path: /opt/tomcat
-#     state: directory
-#     mode: 0775
-# 
+- name: Creates tomcat directory 
+  file:
+    path: /opt/tomcat
+    state: directory
+    mode: 0775
+
 # # 
 # - name: Creates jenkins directory 
 #   file:
@@ -34,11 +34,3 @@
 #   file:
 #     path: /mnt/docker
 #     state: directory
-
-
-- name: Creates tomcat directory 
-  file:
-    path: /opt/tomcat
-    state: directory
-    mode: 0775
-
